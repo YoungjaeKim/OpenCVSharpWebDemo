@@ -3,6 +3,9 @@ This demo project follows [OpenCVSharp](https://github.com/shimat/opencvsharp) i
 
 The Post-build event makes copy opencv-related dll files into `\bin` directory in order to fix `TypeInitializationException`. As such, if you want to deploy it to Azure or other remote host, you have to make a command to copy all files in `\bin\dll\x86` to `\bin`.
 
+# Fix failed copy command during build
+- If you faced error 'dll used by other process' during Post-build event, just kill `iisexpress.exe` process in task manager.
+
 # Additional Information
 - OpenCVSharp nuget: https://www.nuget.org/packages/OpenCvSharp-AnyCPU/
 - Version used: 2.4.10.20150820
