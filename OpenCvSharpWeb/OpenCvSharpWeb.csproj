@@ -214,6 +214,7 @@
     <Content Include="Content\Site.css" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <None Include="Properties\PublishProfiles\barovoca - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -312,7 +313,7 @@
     <Error Condition="!Exists('..\packages\OpenCvSharp-AnyCPU.2.4.10.20150820\build\OpenCvSharp-AnyCPU.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\OpenCvSharp-AnyCPU.2.4.10.20150820\build\OpenCvSharp-AnyCPU.props'))" />
   </Target>
   <PropertyGroup>
-    <PostBuildEvent>copy "$(TargetDir)dll\x86" "$(TargetDir)"</PostBuildEvent>
+    <PostBuildEvent>copy "$(TargetDir)dll\x86" "$(TargetDir)" /Y</PostBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
        Other similar extension points exist, see Microsoft.Common.targets.
